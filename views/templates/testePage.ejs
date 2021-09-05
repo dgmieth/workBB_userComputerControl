@@ -1,0 +1,59 @@
+<%- include('metadata/beginnig.ejs', {title:'teste'}) %>
+<%- include('styleSheets/testePage.ejs') %>
+<header style="height: 15%!important;background-color: rgb(146, 146, 146);">
+    <div class=".container-fluid text-center mx-auto my-auto h-100 w-100" >
+        <div class="d-flex justify-content-center h-100 w-100">
+            <div class="p-2">
+                <img src="/img/painelPCsIcon.png" alt="" style="height: 90%;">
+            </div>
+            <div class="p-2 align-self-center">
+                <div class="d-flex justify-content-center h-100 w-100">
+                    <div class="p-2 align-self-center">
+                        <div class="row text-left">
+                            <div class="col-12">
+                                <p class="h2" style="color:black;margin: 0;">
+                                    Controle PCs Novos
+                                </p>
+                                <p class="h5" style="color: black;margin: 0">
+                                    <%= info.bb %>
+                                </p>
+                                <p class="h5" style="color: black;margin: 0">
+                                    <%= info.prefixo %> <%= info.gecor %>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div id="modal-content" class="modal-content">
+        
+      </div>
+    </div>
+  </div>
+<div class="container-fluid mx-auto my-auto text-center w-100" id="spinner" style="display: none;height: 78%!important;background-color:white;">
+    <img src="/img/spinner200.gif" alt="spinner" style="margin-top: 15%!important;">
+</div>
+<main id="main" style="height: 73%!important;background-color:white;" >
+    <div id="main-wrapper" class="d-flex justify-content-center w-100" style="height: 7%!important;margin: 5px;background-color: rgb(172, 172, 172);border-radius: 3px;">
+        <div class="p-2 align-self-center">
+            <button id="in-office-btn" class="btn btn-primary active">Na GS</button>
+        </div>
+        <div class="p-2 align-self-center">
+            <button id="out-office-btn" class="btn btn-primary">Fora da GS</button>
+        </div>
+    </div>
+    <div id="main-content" class="container-fluid mx-auto my-auto text-center w-100" style="height: 90%!important;overflow-y: auto;">
+    
+    </div>
+</main>
+<footer style="height: 10%!important;background-color: black;"></footer>
+<%- include('scripts/testePage.ejs') %>
+<%- include('metadata/end.ejs') %>
+
+

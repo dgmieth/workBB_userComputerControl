@@ -1,0 +1,86 @@
+<%- include('metadata/beginnig.ejs', {title: info.pageTitle}) %>
+<%- include('styleSheets/testePage.ejs') %>
+<header style="height: 15%!important;background-color: rgb(146, 146, 146);">
+    <div class=".container-fluid text-center mx-auto my-auto h-100 w-100" >
+        <div class="d-flex justify-content-center h-100 w-100">
+            <div class="p-2">
+                <img src="/img/painelPCsIcon.png" alt="" style="height: 90%;">
+            </div>
+            <div class="p-2 align-self-center">
+                <div class="d-flex justify-content-center h-100 w-100">
+                    <div class="p-2 align-self-center">
+                        <div class="row text-left">
+                            <div class="col-12">
+                                <p class="h2" style="color:black;margin: 0;">
+                                    Controle retirada equipamentos
+                                </p>
+                                <p class="h5" style="color: black;margin: 0">
+                                    <%= info.bb %>
+                                </p>
+                                <p class="h5" style="color: black;margin: 0">
+                                    <%= info.prefixo %> <%= info.gecor %>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div id="modal-content" class="modal-content">
+        
+      </div>
+    </div>
+  </div>
+<div class="container-fluid mx-auto my-auto text-center w-100" id="spinner" style="display: none;height: 72%!important;background-color:white;">
+    <img src="/img/spinner200.gif" alt="spinner" style="margin-top: 15%!important;">
+</div>
+<style>
+    thead tr:nth-child(1) th { 
+        position: sticky; top: 0; 
+        background-color: #dee2e6;
+    }
+    
+</style>
+<main id="main" style="height: 80%!important;background-color:white;" >
+    <div class="row h-100 w-100 mx-auto my-auto">
+        <div id="appState" class="col-2 h-100 text-center mx-auto my-auto">
+            <div class="row w-100 mx-auto my-auto text-center">
+                <div class="col-12 w-100 mx-auto my-auto text-center" style="padding-top: 3px;padding-bottom: 3px;">
+                    <button id="allPCs" type="button" class="btn btn-outline-secondary w-100  text-wrap active">Todos PCs</button>
+                </div>
+                <div class="col-12 w-100 mx-auto my-auto text-center" style="padding-top: 3px;padding-bottom: 3px;">
+                    <button id="allInOffice" type="button" class="btn btn-outline-secondary w-100  text-wrap">Todos in Office</button>
+                </div>
+                <div class="col-12 w-100 mx-auto my-auto text-center" style="padding-top: 3px;padding-bottom: 3px;">
+                    <button id="allOutOfOffice" type="button" class="btn btn-outline-secondary w-100  text-wrap">Todos retirados</button>
+                </div>
+                <div class="col-12 w-100 mx-auto my-auto text-center" style="padding-top: 3px;padding-bottom: 3px;">
+                    <button id="managePCs" type="button" class="btn btn-outline-primary w-100 text-wrap">Distribuir/retirar</button>
+                </div>
+                <div class="col-12 w-100 mx-auto my-auto text-center" style="padding-top: 3px;padding-bottom: 3px;">
+                    <button id="allItems" type="button" class="btn btn-outline-secondary w-100  text-wrap">Outros items</button>
+                </div>
+                <div class="col-12 w-100 mx-auto my-auto text-center" style="padding-top: 3px;padding-bottom: 3px;">
+                    <button id="manageItems" type="button" class="btn btn-outline-success w-100 text-wrap">Gerenciar items</button>
+                </div>
+                <div class="col-12 w-100 mx-auto my-auto text-center" style="padding-top: 3px;padding-bottom: 3px;">
+                    <button id="generalView" type="button" class="btn btn-outline-warning w-100 text-wrap">Visão geral</button>
+                </div>
+            </div>
+        </div>
+        <div id="appContent" class="col-10 h-100 text-center mx-auto my-auto">
+
+        </div>
+    </div>
+</main>
+<footer style="height: 5%!important;background-color: black;">
+</footer>
+<%- include('scripts/testePage.ejs') %>
+<%- include('metadata/end.ejs') %>
+
+
